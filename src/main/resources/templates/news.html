@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="keywords" content="Trust-news, Trust news">
+            <meta name="description" content="Trust-news">
+            <title>Trust-news</title>
+            <link rel="stylesheet" th:href="@{/css/news.css}">
+            <link rel="stylesheet" th:href="@{/css/img}">
+            <link rel="stylesheet" th:href="@{/css/font}">
+
+        </head>
+        <body>
+            <div class="element1">
+                <ul class = "menubar">
+                    <li class = "menubar_img1"><img src="/css/img/logo_bank.svg" class = "menubar_img1_size" alt=""></li>
+                    <li class = "menubar_img2"><img src="/css/img/news.svg" class = "menubar_img2_size" alt=""></li>
+                </ul>
+            </div>
+            
+            
+            <div class="back2">
+                <hr>
+                <div class="card_2">
+                    <img src="/css/img/logo_card.svg" class = "card_2_img1" alt="">
+                    <img src ="/css/img/block1.svg" class = "card_2_img2" alt="">
+                    <h1>Начните бизнес не выходя из дома</h1>
+                    <p class = "card2_text">Заполним заявления, отправим в налоговую и пришлем на почту готовые документы</p>
+
+                </div>
+            </div>
+
+            <div class="back2" th:each="product : ${products}" th:if="${product.productId == '1'}">
+                <hr>
+                <div class="card_3">
+                    <img src="/css/img/logo_card.svg" class = "card_3_img1" alt="">
+                    <img src ="/css/img/block1.svg" class = "card_3_img2" alt="">
+                    <h1 th:text="${product.title}">Тема новости</h1>
+                    <div class = "card_3_photo1">
+                        <img src ="/css/img/1.png" alt="">
+                    </div>
+                    <p class = "card2_text">Счет для инвестирования с возможностью получить +13% через налоговый вычет</p>
+                </div>
+            </div>
+
+            <div class="back2" th:each="product : ${products}" th:if="${product.productId == '2'}">
+                <hr>
+                <div class="card_4">
+                    <img src="/css/img/logo_card.svg" class = "card_4_img1" alt="">
+                    <h1 th:text="${product.title}">Тема новости</h1>
+                    <div class = "card_4_photo1">
+                        <img src ="/css/img/2.png" alt="">
+                    </div>
+                    <p class = "card2_text">Регистрация фирмы — 0 ₽. Без похода в ФНС и МФЦ. Бесплатно откроем счет. Откроем бизнес без госпошлин</p>
+                </div>
+            </div>
+            <div class="back2" th:each="product : ${products}" th:if="${product.productId == '3'}">
+                <hr>
+                <div class="card_5">
+                    <img src="/css/img/logo_card.svg" class = "card_5_img1" alt="">
+                    <h1 th:text="${product.title}">Тема новости</h1>
+                    <div class = "card_5_photo1">
+                        <img src ="/css/img/3.png" alt="">
+                    </div>
+                    <p class = "card2_text">Откройте вклад или накопительный счет, получайте доход, накопите на квартиру, отпуск, учебу и другие масштабные цели</p>
+                </div>
+            </div>
+            <div class="back2">
+                <hr>
+                <div class="card_6">
+                    <img src="/css/img/logo_card.svg" class = "card_6_img1" alt="">
+                    <h1 >Онлайн-банк для малого бизнеса</h1>
+                    <div class = "card_6_photo1">
+                        <img src ="/css/img/5.png" alt="">
+                    </div>
+                    <div class = "card_6_photo2">
+                        <img src ="/css/img/6.png" alt="">
+                    </div>
+                    <div class = "card_6_photo3">
+                        <img src ="/css/img/7.png" alt="">
+                    </div>
+                    <div class = "card_6_photo4">
+                        <img src ="/css/img/8.png" alt="">
+                    </div>
+                    <p class = "card2_text">Без очередей и ожидания на линии. Удобное приложение и личный кабинет.</p>
+
+                </div>
+            </div>
+            <div class="back2">
+                <hr>
+                <hr>
+                <hr>
+                <div class="pos_button">
+                    <a class="knopka" th:href="@{/start/feedback_page}">Будем рады вашему отзыву</a>
+                </div>
+            </div>
+            
+            
+            
+            
+        </body>
+    </html>

@@ -1,0 +1,245 @@
+@font-face {
+	font-family: Inter-Medium ;
+	src: url('font/Inter-Medium.ttf') 
+		
+}
+@font-face {
+	font-family: Inter-Light ;
+	src: url('font/Inter-Light.ttf') 
+		
+}
+
+
+
+.card_body{
+    background-color: #FFFFFF;
+    width: 901px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px ;
+    /*border: solid red;*/
+    padding-bottom: 30px;
+}
+
+
+
+
+
+
+.card_feedback{
+    margin-top: 16px;
+    border: 1px solid #54407D;
+    background-image: url('img/feedback_bg_card_2.svg');
+    width: 95%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.card_feedback_all{
+    width: 95%;
+    margin-top: 16px;
+    border: 1px solid #ffffff;
+    background-image: url('img/back_otz.svg');
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card_feedback__header{
+    background-color: #8062BE;
+    width: 30%;
+    margin-top: 20px;
+}
+
+.card_feedback__body {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.block_feedback_1 > input{
+    width: 30.9%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
+
+.block_feedback_2 {
+    margin-top: 10px;
+}
+
+.block_feedback_2 > textarea{
+    width: 100%;
+    height: 150px;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.block_feedback__butt {
+    width: 100%;
+    text-align: center;
+}
+
+.block_feedback__butt > input {
+    margin-top: 10px;
+    background-color: #5F38AF;
+    width: 40%;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: Inter-Medium, serif;
+}
+
+.header_card {
+    color: #785AB6;
+    text-align: center;
+}
+
+.page-title{
+    text-align: center;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  margin-top: 15%;
+  object-fit: cover;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+}
+.prev-button {
+  left: 10px;
+  color: #54407D;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.prev-button:hover {
+    color: #604792;
+}
+
+.next-button {
+  right: 10px;
+  margin-top: -10px;
+  color: #54407D;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.next-button:hover {
+    color: #604792;
+}
+.end{
+    text-align: center;
+    font-family: Pixel, serif;
+    color: white;
+}
+
+.otz_1{
+    width: 355px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo_otz{
+    margin: auto;
+    width: 100px; 
+    height: 100px;
+    border-radius: 5px;
+    background-color: #54407D;
+}
+.photo_otz1{
+    position: relative;
+    top: -15px;
+    width: 90%;
+    height: 80%;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+.name_otz{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-family: Inter-Medium, serif;
+}
+.text_otz{
+    text-align: center;
+    font-family: Inter-Medium, serif;}
+
+.number_card_otz{
+    font-size: 14px;
+    text-align: center;
+    font-family: Inter-Medium, serif;
+}
+.number2_card_otz{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    color: #FFFFFF;
+    border-radius: 10%;
+    margin: auto;
+    text-align: center;
+    font-family: Inter-Medium, serif;
+    background-color: #54407D;
+    width: 50px;
+}
+
+.button_down {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+}
+
+.button_down > button {
+    background-color: #54407D;
+    width: 15px;
+    height: 15px;
+    margin-left: 20px;
+    border: 1px solid #54407D;
+    border-radius: 30px;
+}
+
+.button_down > button:hover {
+    background-color: white;
+    border: 2px solid #54407D;
+}
+
+.button_down > button:focus {
+    background-color: #9564f6;
+    border: 1px #9564f6;
+}

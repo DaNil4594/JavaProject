@@ -1,0 +1,82 @@
+@font-face {
+	font-family: Inter-Medium;
+	src: url('font/Inter-Medium.ttf');
+}
+
+@font-face {
+	font-family: Inter-Light;
+	src: url('font/Inter-Light.ttf');
+}
+
+html, body {
+	background-image: url("img/back.svg");
+	margin: 0;
+	padding: 0;
+	background-size: 100%;
+}
+
+.back2 {
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid white;
+	background-color: white;
+	width: 900px;
+}
+
+.card_1 {
+	position: absolute;
+	border: 1px solid #54407D;
+	background-color: #54407D;
+	width: 901px;
+	height: 361px;
+	top: 50%; 
+	left: 50%; 
+	transform: translate(-50%, -50%); 
+}
+
+.card_1_img1 {
+	width: 360px;
+	height: 360px;
+	float: right;
+	padding-right: 1%;
+}
+
+.card_1_textpol_card_1_img1 {
+	float: left;
+	padding-left: 4%;
+	margin-top: 60px;
+}
+
+.card_1_textpol_text {
+	width: 390px;
+	font-family: Inter-Light, serif;
+	padding-left: 4%;
+	margin-top: 5px;
+	font-size: 20pt;
+	float: left;
+	color: white;
+}
+
+a:link, a:visited {
+	color: #ffffff;
+	font-size: 28px;
+	font-family: Inter-Medium, serif;
+	border: 3px solid #8062BE;
+	border-radius: 5px;
+	background-color: #8062BE;
+	padding: 14px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	transition: .8s linear;
+}
+
+a:hover {
+	color: #8062BE;
+	background-color: #54407D;
+}
+
+.pos_button {
+	position: relative;
+	left: 30px;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="keywords" content="Trust-news, Trust news">
+            <meta name="description" content="Trust-news">
+            <title>Trust-news</title>
+            <link rel="stylesheet" th:href="@{/css/feedback.css}">
+            <link rel="stylesheet" th:href="@{/css/news.css}">
+            <link rel="stylesheet" th:href="@{/css/img}">
+            <link rel="stylesheet" th:href="@{/css/font}">
+        </head>
+        <body>
+            <div class="element1">
+                <ul class = "menubar">
+                    <li class = "menubar_img1"><img src="/css/img/logo_bank.svg" class = "menubar_img1_size" alt=""></li>
+                    <li class = "menubar_img2"><a ><img src="/css/img/news.svg" class = "menubar_img2_size" alt=""></a></li>
+                </ul>
+            </div>
+
+            <div class="card_body">
+                <div class="card_1" id="start">
+                    <img src="/css/img/phone.svg" class = "card_1_img1" alt="">
+                    <div class="card_1_textpol">
+                        <img src="/css/img/logo_bank_2.svg" class = "card_1_textpol_card_1_img1" alt="">
+                        <p class ="card_1_textpol_text">Начните свой путь в мире банковских операций вместе с нами!</p>
+                    </div>
+                </div>
+                <h1 class="header_card">Оставить отзыв</h1>
+                <div class="card_feedback">
+                    <form id="feedbackForm" action="/start/feedback_page" method="post">
+                        <div class="card_feedback__header">
+                            <img src="/css/img/logo_bank.svg" class="menubar_img1_size" alt="">
+                        </div>
+                        <div class="card_feedback__body">
+                            <div class="block_feedback_1">
+                                <input type="text" name="userName" placeholder="Ваше имя">
+                                <input type="number" name="productId" placeholder="Номер карточки">
+                                <input type="number" name="mark" placeholder="Оценка" min="1" max="10">
+                            </div>
+                            <div class="block_feedback_2">
+                                <textarea name="reviewBody" placeholder="Ваш комментарий"></textarea>
+                            </div>
+                            <div class="block_feedback__butt">
+                                <input type="submit" value="Отправить отзыв">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <script th:inline="javascript">
+                    $(document).ready(function () {
+                        $('#feedbackForm').submit(function (event) {
+                            event.preventDefault();
+
+                            // Собираем данные из формы
+                            var formData = new FormData(this);
+
+                            // Отправляем POST-запрос
+                            $.ajax({
+                                type: 'POST',
+                                url: $(this).attr('action'),
+                                data: formData,
+                                processData: false,
+                                contentType: false,
+                                success: function (data) {
+                                    // Обновляем страницу
+                                    // location.reload();
+
+                                    // Очищаем поля формы
+                                    $('#feedbackForm')[0].reset();
+                                },
+                                error: function () {
+                                    // Добавьте обработку ошибок, если необходимо
+                                    console.error('Error submitting review');
+                                }
+                            });
+                        });
+                    });
+                </script><script th:inline="javascript">
+                $(document).ready(function () {
+                    $('#feedbackForm').submit(function (event) {
+                        event.preventDefault();
+
+                        // Собираем данные из формы
+                        var formData = new FormData(this);
+
+                        // Отправляем POST-запрос
+                        $.ajax({
+                            type: 'POST',
+                            url: $(this).attr('action'),
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function (data) {
+                                // Очищаем поля формы
+                                $('#feedbackForm')[0].reset();
+
+                                // Обновляем страницу, если необходимо
+                                // location.reload();
+                            },
+                            error: function () {
+                                // Добавьте обработку ошибок, если необходимо
+                                console.error('Error submitting review');
+                            }
+                        });
+                    });
+                });
+            </script>
+
+
+                <!--                <div class="card_feedback">-->
+<!--                    <form th:action="@{/start/feedback_page}" method="post" >-->
+<!--                    <div class="card_feedback__header">-->
+<!--                        <img src="/css/img/logo_bank.svg" class = "menubar_img1_size" alt="">-->
+<!--                    </div>-->
+<!--                    <div class="card_feedback__body">-->
+<!--                        <div class="block_feedback_1">-->
+<!--                                <input type="text" name="userName" placeholder="Ваше имя">-->
+<!--                                <input type="number" name="productId" placeholder="Номер карточки">-->
+<!--                                <input type="number" name="mark" placeholder="Оценка" min="1" max="10">-->
+<!--                        </div>-->
+<!--                        <div class="block_feedback_2">-->
+<!--                                <textarea name="reviewBody" placeholder="Ваш комментарий"></textarea>-->
+<!--                        </div>-->
+<!--                        <div class="block_feedback__butt">-->
+<!--                            <input type="submit" th:href="@{/start/feedback_page}">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    </form>-->
+
+<!--                    <script th:inline="javascript">-->
+<!--                        $(document).ready(function () {-->
+<!--                            $('#feedbackForm').submit(function (event) {-->
+<!--                                event.preventDefault();-->
+
+<!--                                // Собираем данные из формы-->
+<!--                                var formData = new FormData(this);-->
+
+<!--                                // Отправляем POST-запрос-->
+<!--                                $.ajax({-->
+<!--                                    type: 'POST',-->
+<!--                                    url: $(this).attr('action'),-->
+<!--                                    data: formData,-->
+<!--                                    processData: false,-->
+<!--                                    contentType: false,-->
+<!--                                    success: function (data) {-->
+<!--                                        // Обновляем страницу-->
+<!--                                        location.reload();-->
+<!--                                    },-->
+<!--                                    error: function () {-->
+<!--                                        // Добавьте обработку ошибок, если необходимо-->
+<!--                                        console.error('Error submitting review');-->
+<!--                                    }-->
+<!--                                });-->
+<!--                            });-->
+<!--                        });-->
+<!--                    </script>-->
+                </div>
+                <h1 class="header_card">Отзывы наших клиентов</h1>
+                <div class="card_feedback_all">
+                    <div class="slider-container">
+                        <div class="slider">
+                            <div class ="otz_1">
+                                <div class = "photo_otz">
+                                    <img class = "photo_otz1" src="/css/img/feedback/2165635998_preview_31Zb8aIB7tA.jpg" alt="">
+                                </div>
+                                <h2 class = "name_otz">Рикардо Милас</h2>
+                                <h6 class = "number_card_otz">Номер карточки<span class = "number2_card_otz">1111 </span></h6>
+                                <p class ="text_otz">Мне нравится ваше приложение очень сильно ведь оно позволяет раскрыть весь мой понтециал в сфере услуг на дому</p>
+                            </div>
+                            <div class ="otz_1">
+                                <div class = "photo_otz">
+                                    <img class = "photo_otz1" src="/css/img/feedback/2165635998_preview_31Zb8aIB7tA.jpg" alt="">
+                                </div>
+                                <h2 class = "name_otz">Вила деля Кока</h2>
+                                <h6 class = "number_card_otz">Номер карточки <span class = "number2_card_otz">2377 </span></h6>
+                                <p class ="text_otz">Просто бомба, даааааааа слышышь да</p>
+                            </div>
+                            <div class ="otz_1">
+                                <div class = "photo_otz">
+                                    <img class = "photo_otz1" src="/css/img/feedback/2165635998_preview_31Zb8aIB7tA.jpg" alt="">
+                                </div>
+                                <h2 class = "name_otz">Твой нежный пупсик</h2>
+                                <h6 class = "number_card_otz">Номер карточки<span class = "number2_card_otz">2345 </span></h6>
+                                <p class ="text_otz">Мне нравится ваше приложение очень сильно ведь оно позволяет раскрыть весь мой понтециал в сфере услуг на дому</p>
+                            </div>
+                            <div class ="otz_1">
+                                <div class = "photo_otz">
+                                    <img class = "photo_otz1" src="/css/img/980448-raskraska-veselyy-rikardo-milos.jpg" alt="">
+                                </div>
+                                <h2 class = "name_otz">Хочу арбуз</h2>
+                                <h6 class = "number_card_otz">Номер карточки<span class = "number2_card_otz"> 1111 </span></h6>
+                                <p class ="text_otz">Арбузы продаётся через банк вах, крута банка</p>
+                            </div>
+                        </div>
+                        <button class="prev-button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+                        <button class="next-button" aria-label="Посмотреть следующий слайд">&gt;</button>
+                        <div class="button_down">
+                            <button class="button_d1"></button>
+                            <button class="button_d22"></button>
+                            <button class="button_d33"></button>
+                            <button class="button_d44"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="/css/js/script.js"></script>
+        </body>
+    </html>
